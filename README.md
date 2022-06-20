@@ -1,3 +1,4 @@
+[![CI](https://github.com/HIStudiosEU/food-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/HIStudiosEU/food-frontend/actions/workflows/ci.yml)
 # food-frontend
 
 ## Project setup
