@@ -23,12 +23,13 @@ export default {
     }
   },
   mounted () {
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/food'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
 
-    fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
+    fetch(endpoint, requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(food => {
         this.foods.push(food)
