@@ -19,25 +19,20 @@ export default {
   name: 'Food-comp',
   data () {
     return {
-      foods: [
-        {
-          id: 1,
-          name: 'Banane',
-          kalos: 100,
-          fat: 10,
-          carbs: 3,
-          proteins: 7
-        },
-        {
-          id: 2,
-          name: 'Apfel',
-          kalos: 200,
-          fat: 9,
-          carbs: 2,
-          proteins: 6
-        }
-      ]
+      foods: []
+    }
+  },
+  methods: {
+    mounted () {
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      }
 
+      fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error))
     }
   }
 }
