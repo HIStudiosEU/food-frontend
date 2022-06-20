@@ -29,7 +29,7 @@ export default {
     }
 
     fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
-      .then(response => response.text())
+      .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error))
   }
