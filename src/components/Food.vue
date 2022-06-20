@@ -30,7 +30,9 @@ export default {
 
     fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
       .then(response => response.json())
-      .then(result => console.log(result))
+      .then(result => result.forEach(food => {
+        this.foods.push(food)
+      }))
       .catch(error => console.log('error', error))
   }
 }
