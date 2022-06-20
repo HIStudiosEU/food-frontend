@@ -23,7 +23,15 @@ export default {
     }
   },
   mounted () {
-    console.log('test')
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    }
+
+    fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error))
   }
 }
 </script>
