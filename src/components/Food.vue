@@ -22,18 +22,16 @@ export default {
       foods: []
     }
   },
-  methods: {
-    mounted () {
-      const requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-      }
-
-      fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
-        .then(response => response.json())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error))
+  mounted () {
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
     }
+
+    fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
+      .then(response => response.json())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error))
   }
 }
 </script>
