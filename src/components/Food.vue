@@ -29,7 +29,7 @@ export default {
       redirect: 'follow'
     }
 
-    fetch(endpoint, requestOptions)
+    fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(food => {
         this.foods.push(food)
