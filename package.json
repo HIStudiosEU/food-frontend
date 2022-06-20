@@ -2,9 +2,9 @@
   "name": "food-frontend",
   "version": "0.1.0",
   "private": true,
-  "engine": {
-    "node": "16.x.x",
-    "npm":  "8.x.x"
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
   },
   "scripts": {
     "start": "vue-cli-service serve",
