@@ -1,6 +1,8 @@
 [![CI](https://github.com/HIStudiosEU/food-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/HIStudiosEU/food-frontend/actions/workflows/ci.yml)
 # food-frontend
 
+Heroku : https://kalotracker-frontend.herokuapp.com/food
+
 ## Project setup
 ```
 npm install
