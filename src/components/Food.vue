@@ -1,7 +1,7 @@
 <template>
-  <h1>Food</h1>
+  <h1>Foodtest</h1>
   <div class="foodlist" v-for="food in foods" :key="food.id">
-    <div>Nametest: </div>
+    <div>Name: </div>
     <div class="foodname">{{ food.name}}</div>
     <div>Kalorien: </div>
     <div class="foodkalos">{{ food.kalos}}</div>
