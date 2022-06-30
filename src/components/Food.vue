@@ -1,5 +1,5 @@
 <template>
-  <h1>Food</h1>
+  <h1>Foodtest</h1>
   <div class="foodlist" v-for="food in foods" :key="food.id">
     <div>Name: </div>
     <div class="foodname">{{ food.name}}</div>
