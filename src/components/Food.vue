@@ -6,7 +6,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ food.name}}</h5>
         <p class="card-text">Kalorien:  {{ food.kalos}}</p>
-        <p class="card-text">Fett:  {{ food.fat}}</p>
+        <p class="card-text">Fettt:  {{ food.fat}}</p>
         <p class="card-text">Kohlenhydrate  {{ food.carbs}}</p>
         <p class="card-text">Eiweiß  {{ food.proteins}}</p>
         <a href="#" class="card-link">Löschen</a>
