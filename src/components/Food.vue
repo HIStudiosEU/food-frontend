@@ -11,6 +11,7 @@
         <p class="card-text">Eiweiß  {{ food.proteins}}</p>
         <a href="#" class="card-link" style="float: right;">Löschen</a>
       </div>
+      <div>   </div>
     </div>
 
   </div>
