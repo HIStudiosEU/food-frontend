@@ -2,7 +2,7 @@
   <h1 id="foodhead">Food</h1>
 
   <div class="foodlist" v-for="food in foods" :key="food.id">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;float: left;">
       <div class="card-body">
         <h5 class="card-title">{{ food.name}}</h5>
         <p class="card-text">Kalorien:  {{ food.kalos}}</p>
