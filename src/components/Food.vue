@@ -5,7 +5,7 @@
     <div class="card" style="width: 18rem;float: left;">
       <div class="card-body">
         <h5 class="card-title">{{ food.name}}</h5>
-        <p class="card-text">Kalorien:  {{ food.kalos}}</p>
+        <p class="card-text">Kalorien:  {{food.fat*9+food.carbs*4+food.proteins*4}}</p>
         <p class="card-text">Fettt:  {{ food.fat}}</p>
         <p class="card-text">Kohlenhydrate  {{ food.carbs}}</p>
         <p class="card-text">Eiweiß  {{ food.proteins}}</p>
