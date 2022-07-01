@@ -1,38 +1,19 @@
 <template>
-  <h1>Food</h1>
+  <h1 id="foodhead">Food</h1>
+
   <div class="foodlist" v-for="food in foods" :key="food.id">
-    <div>Name: </div>
-    <div class="foodname">{{ food.name}}</div>
-    <div>Kalorien: </div>
-    <div class="foodkalos">{{ food.kalos}}</div>
-    <div>Fett: </div>
-    <div class="foodfat">{{ food.fat}}</div>
-    <div>Kohlenhydrate: </div>
-    <div class="foodcarbs">{{ food.carbs}}</div>
-    <div>Eiweiß: </div>
-    <div class="foodproteins">{{ food.proteins}}</div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ food.name}}</h5>
+        <p class="card-text">Kalorien:  {{ food.kalos}}</p>
+        <p class="card-text">Fett:  {{ food.fat}}</p>
+        <p class="card-text">Kohlenhydrate  {{ food.carbs}}</p>
+        <p class="card-text">Eiweiß  {{ food.proteins}}</p>
+        <a href="#" class="card-link">Löschen</a>
+      </div>
+    </div>
+
   </div>
-  <a class="list-group-item list-group-item-action" id="foodeinzeln">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Brot</h5>
-    </div>
-    <p class="mb-1">Kalorien, Eiweiß, etc.</p>
-    <small class="text-muted">Gramm</small>
-  </a>
-  <a class="list-group-item list-group-item-action" id="foodeinzeln">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Banane</h5>
-    </div>
-    <p class="mb-1">Kalorien, Eiweiß, etc.</p>
-    <small class="text-muted">Gramm</small>
-  </a>
-  <a class="list-group-item list-group-item-action" id="foodeinzeln">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Apfel</h5>
-    </div>
-    <p class="mb-1">Kalorien, Eiweiß, etc.</p>
-    <small class="text-muted">Gramm</small>
-  </a>
 
 </template>
 
@@ -61,7 +42,8 @@ export default {
 </script>
 
 <style scoped>
-#foodeinzeln{
-  padding-bottom: 30px;
+#foodhead{
+  padding-left:10px;
+  padding-top: 10px;
 }
 </style>
