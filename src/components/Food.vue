@@ -9,7 +9,7 @@
         <p class="card-text">Fettt:  {{ food.fat}}</p>
         <p class="card-text">Kohlenhydrate  {{ food.carbs}}</p>
         <p class="card-text">Eiweiß  {{ food.proteins}}</p>
-        <a href="#" class="card-link">Löschen</a>
+        <a href="#" class="card-link" style="float: right;">Löschen</a>
       </div>
     </div>
 
