@@ -1,33 +1,33 @@
 <template>
   <div class="hello">
     <div id="wrapper">
-      <div id="eingabe">
+      <form id="eingabe" onsubmit="addfood()">
         <h1>{{ msg }}</h1>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="Name">
+          <input type="email" class="form-control" id="floatingInput" v-model="name" placeholder="Name">
           <label for="floatingInput">Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="Fett">
+          <input type="email" class="form-control" id="floatingInput" v-model="fat" placeholder="Fett">
           <label for="floatingInput">Fett</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="Kohlenhydrate">
+          <input type="email" class="form-control" id="floatingInput" v-model="carbs" placeholder="Kohlenhydrate">
           <label for="floatingInput">Kohlenhydrate</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="Eiweiß">
+          <input type="email" class="form-control" id="floatingInput" v-model="proteins"  placeholder="Eiweiß">
           <label for="floatingInput">Eiweiß</label>
         </div>
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="floatingInput" placeholder="Gramm">
           <label for="floatingInput">Gramm</label>
         </div>
-        <a id="foodbuttons">
-        <div><button type="button" class="btn btn-primary" id="button" >Hinzufügen</button></div>
-        <div><button type="button" class="btn btn-primary" id="button" >Speichern</button></div>
-        </a>
-      </div>
+        <div id="foodbuttons">
+          <button type="button" class="btn btn-primary btn-lg">Hinzufügen</button>
+          <button type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
+        </div>
+      </form>
       <div id="tagesbedarf">
         <div>
           <h1 id="tagesbedarfhead">Tagesbedarf</h1>
@@ -49,6 +49,38 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      name: '',
+      carbs: '',
+      fat: '',
+      proteins: '',
+      kalories: '{{this.carbs*4+this.fat*9+this.proteins*4}}'
+    }
+  },
+  methods: {
+    createFood () {
+      const myHeaders = new Headers()
+      myHeaders.append('Content-Type', 'application/json')
+
+      const raw = JSON.stringify({
+        name: this.name,
+        carbs: this.carbs,
+        fat: this.fat,
+        proteins: this.proteins
+      })
+
+      const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      }
+
+      fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
+        .catch(error => console.log('error', error))
+    }
   }
 }
 </script>
@@ -70,7 +102,6 @@ export default {
   height:120px;
   padding-top: 10px;
   padding-left: 10px;
-
 }
 #tagesbedarf {
   padding-top: 110px;
@@ -82,8 +113,8 @@ export default {
 }
 
 #foodbuttons{
-
   float: left;
+  display: table;
 }
 
 #tagesbedarfhead{
