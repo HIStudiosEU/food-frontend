@@ -61,6 +61,7 @@ export default {
   },
   methods: {
     createFood () {
+      console.log(this.name)
       const myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
 
