@@ -46,6 +46,6 @@ export default {
 <style scoped>
 #foodhead{
   padding-left:10px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 </style>
