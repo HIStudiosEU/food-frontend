@@ -1,5 +1,5 @@
 <template>
-  <h1 id="foodhead">Food</h1>
+  <h1 id="foodhead">Foodtest</h1>
 
   <div class="foodlist" v-for="food in foods" :key="food.id">
     <div class="card" style="width: 18rem;float: left;">
