@@ -34,8 +34,8 @@
           <ul class="list-group">
             <li class="list-group-item">Kalorien: 2000</li>
             <li class="list-group-item">Fett: {{fatfill}}</li>
-            <li class="list-group-item">Kohlenhydrate: {{carbfill}}}</li>
-            <li class="list-group-item">Eiweiß: {{proteinsfill}}}</li>
+            <li class="list-group-item">Kohlenhydrate: {{carbfill}}</li>
+            <li class="list-group-item">Eiweiß: {{proteinsfill}}</li>
           </ul>
           <div id="tbloeschen"><button type="button" class="btn btn-primary" id="button" >Löschen</button></div>
         </div>
@@ -89,10 +89,8 @@ export default {
     },
 
     fillfood () {
-      console.log('es klappt')
-      return {
-        fatfill: this.fatfill + this.fat
-      }
+      console.log(this.fatfill)
+      this.fatfill = this.fatfill + this.fat
     }
 
   }
