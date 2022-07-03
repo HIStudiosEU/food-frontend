@@ -32,7 +32,7 @@
         <div>
           <h1 id="tagesbedarfhead">Tagesbedarf</h1>
           <ul class="list-group">
-            <li class="list-group-item">Kalorien: 2000</li>
+            <li class="list-group-item">Kalorien: {{fatfill*9+carbfill*4+proteinsfill*4}}</li>
             <li class="list-group-item">Fett: {{fatfill}}</li>
             <li class="list-group-item">Kohlenhydrate: {{carbfill}}</li>
             <li class="list-group-item">Eiweiß: {{proteinsfill}}</li>
@@ -91,6 +91,8 @@ export default {
     fillfood () {
       console.log(this.fatfill)
       this.fatfill = this.fatfill + this.fat
+      this.carbfill = this.carbfill + this.carbs
+      this.proteinsfill= this.proteinsfill + this.proteins
     }
 
   }
