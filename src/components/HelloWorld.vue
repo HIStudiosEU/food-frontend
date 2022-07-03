@@ -5,7 +5,7 @@
         <h1>{{ msg }}</h1>
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="floatingInput" v-model="name" placeholder="Name">
-          <label for="floatingInput">Name</label>
+          <label for="floatingInput">Nametest</label>
         </div>
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="floatingInput" v-model="fat" placeholder="Fett">
