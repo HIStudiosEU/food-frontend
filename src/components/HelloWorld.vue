@@ -62,7 +62,6 @@ export default {
       carbfill: 0,
       proteinsfill: 0
 
-
     }
   },
   methods: {
