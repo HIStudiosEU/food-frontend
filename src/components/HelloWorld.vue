@@ -91,9 +91,9 @@ export default {
 
     fillfood () {
       console.log(this.fatfill)
-      this.fatfill = (this.fatfill + this.fat) * this.gramm
-      this.carbfill = (this.carbfill + this.carbs) * this.gramm
-      this.proteinsfill = (this.proteinsfill + this.proteins) * this.gramm
+      this.fatfill = ((this.fatfill + this.fat) * this.gramm) / 100
+      this.carbfill = ((this.carbfill + this.carbs) * this.gramm) / 100
+      this.proteinsfill = ((this.proteinsfill + this.proteins) * this.gramm) / 100
     }
 
   }
