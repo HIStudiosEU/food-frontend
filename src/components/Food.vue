@@ -1,7 +1,6 @@
 <template>
   <body>
   <h1 id="foodhead">Food</h1>
-
   <div class="foodlist" v-for="food in foods" :key="food.id">
     <div class="card" style="width: 18rem;float: left;">
       <div class="card-body">
@@ -58,4 +57,5 @@ body {
 h1 {
   color: azure;
 }
+
 </style>
