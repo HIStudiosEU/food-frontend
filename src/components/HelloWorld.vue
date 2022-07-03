@@ -92,7 +92,7 @@ export default {
       console.log(this.fatfill)
       this.fatfill = this.fatfill + this.fat
       this.carbfill = this.carbfill + this.carbs
-      this.proteinsfill= this.proteinsfill + this.proteins
+      this.proteinsfill = this.proteinsfill + this.proteins
     }
 
   }
