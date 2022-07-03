@@ -90,6 +90,9 @@ export default {
 
     fillfood () {
       console.log('es klappt')
+      return {
+        fatfill: this.fatfill + this.fat
+      }
     }
 
   }
