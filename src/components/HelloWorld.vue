@@ -4,23 +4,23 @@
       <form id="eingabe" onsubmit="addfood()">
         <h1>{{ msg }}</h1>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" v-model="name" placeholder="Name">
+          <input type="text" class="form-control" id="floatingInput" v-model="name" placeholder="Name">
           <label for="floatingInput">Nametest</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" v-model="fat" placeholder="Fett">
+          <input type="number" class="form-control" id="floatingInput" v-model="fat" placeholder="Fett">
           <label for="floatingInput">Fett</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" v-model="carbs" placeholder="Kohlenhydrate">
+          <input type="number" class="form-control" id="floatingInput" v-model="carbs" placeholder="Kohlenhydrate">
           <label for="floatingInput">Kohlenhydrate</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" v-model="proteins"  placeholder="Eiweiß">
+          <input type="number" class="form-control" id="floatingInput" v-model="proteins"  placeholder="Eiweiß">
           <label for="floatingInput">Eiweiß</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="Gramm">
+          <input type="number" class="form-control" id="floatingInput" placeholder="Gramm">
           <label for="floatingInput">Gramm</label>
         </div>
         <div id="foodbuttons">
