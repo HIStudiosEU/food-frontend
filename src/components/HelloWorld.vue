@@ -20,7 +20,7 @@
           <label for="floatingInput">Eiweiß</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="floatingInput" placeholder="Gramm">
+          <input type="number" class="form-control" id="floatingInput" v-model="gramm" placeholder="Gramm">
           <label for="floatingInput">Gramm</label>
         </div>
         <div id="foodbuttons">
@@ -58,6 +58,7 @@ export default {
       fat: '',
       proteins: '',
       kalories: '{{this.carbs*4+this.fat*9+this.proteins*4}}',
+      gramm: '',
       fatfill: 0,
       carbfill: 0,
       proteinsfill: 0
@@ -90,9 +91,9 @@ export default {
 
     fillfood () {
       console.log(this.fatfill)
-      this.fatfill = this.fatfill + this.fat
-      this.carbfill = this.carbfill + this.carbs
-      this.proteinsfill = this.proteinsfill + this.proteins
+      this.fatfill = (this.fatfill + this.fat) * this.gramm
+      this.carbfill = (this.carbfill + this.carbs) * this.gramm
+      this.proteinsfill = (this.proteinsfill + this.proteins) * this.gramm
     }
 
   }
