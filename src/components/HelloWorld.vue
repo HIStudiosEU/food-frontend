@@ -24,8 +24,8 @@
           <label for="floatingInput">Gramm</label>
         </div>
         <div id="foodbuttons">
-          <button type="button" class="btn btn-primary btn-lg">Hinzufügen</button>
-          <button type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
+          <button type="button" @click="fillfood" class="btn btn-primary btn-lg">Hinzufügen</button>
+          <button type="submit" @click="createFood" class="btn btn-secondary btn-lg">Speichern</button>
         </div>
       </form>
       <div id="tagesbedarf">
@@ -33,9 +33,9 @@
           <h1 id="tagesbedarfhead">Tagesbedarf</h1>
           <ul class="list-group">
             <li class="list-group-item">Kalorien: 2000</li>
-            <li class="list-group-item">Fett: 100</li>
-            <li class="list-group-item">Kohlenhydrate: 500</li>
-            <li class="list-group-item">Eiweiß: 600</li>
+            <li class="list-group-item">Fett: {{fatfill}}</li>
+            <li class="list-group-item">Kohlenhydrate: {{carbfill}}}</li>
+            <li class="list-group-item">Eiweiß: {{proteinsfill}}}</li>
           </ul>
           <div id="tbloeschen"><button type="button" class="btn btn-primary" id="button" >Löschen</button></div>
         </div>
@@ -45,6 +45,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   props: {
@@ -56,7 +57,12 @@ export default {
       carbs: '',
       fat: '',
       proteins: '',
-      kalories: '{{this.carbs*4+this.fat*9+this.proteins*4}}'
+      kalories: '{{this.carbs*4+this.fat*9+this.proteins*4}}',
+      fatfill: 0,
+      carbfill: 0,
+      proteinsfill: 0
+
+
     }
   },
   methods: {
@@ -81,7 +87,12 @@ export default {
 
       fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
         .catch(error => console.log('error', error))
+    },
+
+    fillfood () {
+      console.log('es klappt')
     }
+
   }
 }
 </script>
