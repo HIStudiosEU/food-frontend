@@ -21,5 +21,7 @@ export default {
 </script>
 
 <style scoped>
-
+a {
+  color: saddlebrown;
+}
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <h1 id="foodhead">Foodtesten</h1>
+  <body>
+  <h1 id="foodhead">Food</h1>
 
   <div class="foodlist" v-for="food in foods" :key="food.id">
     <div class="card" style="width: 18rem;float: left;">
@@ -16,6 +17,7 @@
 
   </div>
 
+  </body>
 </template>
 
 <script>
@@ -46,5 +48,14 @@ export default {
 #foodhead{
   padding-left:10px;
   padding-top: 20px;
+}
+body {
+  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 90%;
+}
+h1 {
+  color: azure;
 }
 </style>

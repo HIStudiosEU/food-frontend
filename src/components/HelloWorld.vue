@@ -1,4 +1,5 @@
 <template>
+  <body>
   <div class="hello">
     <div id="wrapper">
       <form id="eingabe" onsubmit="addfood()">
@@ -42,6 +43,8 @@
       </div>
     </div>
   </div>
+  </body>
+
 </template>
 
 <script>
@@ -143,4 +146,14 @@ export default {
   padding-left: 200px;
 
 }
+body {
+  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 90%;
+}
+h1 {
+  color: azure;
+}
+
 </style>
