@@ -2,7 +2,7 @@
   <body>
   <div class="hello">
     <div id="wrapper">
-      <form id="eingabe" onsubmit="addfood()">
+      <form id="eingabetest" onsubmit="addfood()">
         <h1>{{ msg }}</h1>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" v-model="name" placeholder="Name">
@@ -25,8 +25,8 @@
           <label for="floatingInput">Gramm</label>
         </div>
         <div id="foodbuttons">
-          <button type="submit" @click.prevent="fillfood" class="btn btn-primary btn-lg">Hinzufügen</button>
-          <button id="speicherbutton" type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
+          <button type="submit" @click="fillfood" class="btn btn-primary btn-lg">Hinzufügen</button>
+          <button id="speicherbutton" type="submit" @click="createFood" class="btn btn-secondary btn-lg">Speichern</button>
         </div>
       </form>
       <div id="tagesbedarf">
@@ -38,7 +38,7 @@
             <li class="list-group-item">Kohlenhydrate: {{carbfill}}</li>
             <li class="list-group-item">Eiweiß: {{proteinsfill}}</li>
           </ul>
-          <div id="tbloeschen"><button type="button" class="btn btn-primary" id="button" >Löschen</button></div>
+          <div id="tbloeschen"><button type="submit" @click="deletefood" class="btn btn-primary" id="button" >Löschen</button></div>
         </div>
       </div>
     </div>
@@ -97,6 +97,13 @@ export default {
       this.fatfill = ((this.fatfill + this.fat) * this.gramm) / 100
       this.carbfill = ((this.carbfill + this.carbs) * this.gramm) / 100
       this.proteinsfill = ((this.proteinsfill + this.proteins) * this.gramm) / 100
+    },
+
+    deletefood () {
+      console.log(this.fatfill)
+      this.fatfill = 0
+      this.carbfill = 0
+      this.proteinsfill = 0
     }
 
   }
