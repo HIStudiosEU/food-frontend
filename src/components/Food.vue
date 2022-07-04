@@ -65,4 +65,10 @@ h5 {
   color: azure;
   -webkit-text-stroke: 0.5px #020202;
 }
+.card {
+  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 90%;
+}
 </style>
