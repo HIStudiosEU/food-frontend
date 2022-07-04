@@ -64,4 +64,7 @@ h1 {
 p {
   color: azure;
 }
+h5 {
+  color: azure;
+}
 </style>
