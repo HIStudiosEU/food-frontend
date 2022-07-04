@@ -21,6 +21,7 @@ export default {
   padding-left: 30px;
   padding-right: 30px;
   color: #2c3e50;
+
 }
 
 nav {

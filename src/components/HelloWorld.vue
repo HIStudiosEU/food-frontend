@@ -2,7 +2,7 @@
   <body>
   <div class="hello">
     <div id="wrapper">
-      <form id="eingabetest" onsubmit="addfood()">
+      <form id="eingabe" onsubmit="addfood()">
         <h1>{{ msg }}</h1>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" v-model="name" placeholder="Name">
@@ -123,23 +123,19 @@ export default {
 }
 #eingabe {
   display: inline-block;
-  width:120px;
-  height:120px;
   padding-top: 10px;
   padding-left: 10px;
 }
 #tagesbedarf {
+  padding-left: 150px;
+  display: inline-block;
   padding-top: 110px;
   vertical-align:top;
-  display: inline-block;
-  padding-left: 550px;
-  height: 1000px;
-  width: 1050px;
+  width: 620px;
 }
 
 #foodbuttons{
   float: left;
-  display: table;
 }
 
 #tagesbedarfhead{
@@ -154,12 +150,14 @@ export default {
   padding-left: 200px;
 
 }
+
 body {
-  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=2000');
+  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=2000%27');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 90%;
 }
+
 h1 {
   color: azure;
 }
