@@ -25,8 +25,8 @@
           <label for="floatingInput">Gramm</label>
         </div>
         <div id="foodbuttons">
-          <button type="submit" @click="fillfood" class="btn btn-primary btn-lg">Hinzufügen</button>
-          <button id="speicherbutton" type="submit" @click="createFood" class="btn btn-secondary btn-lg">Speichern</button>
+          <button type="submit" @click.prevent="fillfood" class="btn btn-primary btn-lg">Hinzufügen</button>
+          <button id="speicherbutton" type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
         </div>
       </form>
       <div id="tagesbedarf">
