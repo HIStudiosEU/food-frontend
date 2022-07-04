@@ -6,16 +6,14 @@
       <div class="card-body">
         <h5 class="card-title">{{ food.name}}</h5>
         <p class="card-text">Kalorien:  {{food.fat*9+food.carbs*4+food.proteins*4}}</p>
-        <p class="card-text">Fettt:  {{ food.fat}}</p>
+        <p class="card-text">Fett:  {{ food.fat}}</p>
         <p class="card-text">Kohlenhydrate  {{ food.carbs}}</p>
         <p class="card-text">Eiweiß  {{ food.proteins}}</p>
       </div>
     </div>
     <div></div>
     <div></div>
-
   </div>
-
   </body>
 </template>
 
@@ -57,5 +55,13 @@ body {
 h1 {
   color: azure;
 }
-
+.card {
+  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 90%;
+}
+p {
+  color: azure;
+}
 </style>

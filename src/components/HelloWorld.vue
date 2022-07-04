@@ -26,7 +26,7 @@
         </div>
         <div id="foodbuttons">
           <button type="submit" @click.prevent="fillfood" class="btn btn-primary btn-lg">Hinzufügen</button>
-          <button type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
+          <button id="speicherbutton" type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
         </div>
       </form>
       <div id="tagesbedarf">
@@ -138,6 +138,7 @@ export default {
 #tagesbedarfhead{
   padding-left: 130px;
   padding-bottom: 10px;
+  -webkit-text-stroke: 1px #020202;
 }
 
 #tbloeschen{
@@ -155,5 +156,7 @@ body {
 h1 {
   color: azure;
 }
+#speicherbutton {
 
+}
 </style>
