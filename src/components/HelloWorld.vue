@@ -90,6 +90,7 @@ export default {
 
       fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
         .catch(error => console.log('error', error))
+      alert('Dein Food wurde gespeichert')
     },
 
     fillfood () {
