@@ -26,7 +26,7 @@
         </div>
         <div id="foodbuttons">
           <button type="submit" @click.prevent="fillfood" class="btn btn-primary btn-lg">Hinzufügen</button>
-          <button id="speicherbutton" type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
+          <button type="submit" @click.prevent="createFood" class="btn btn-secondary btn-lg">Speichern</button>
         </div>
       </form>
       <div id="tagesbedarf">
@@ -80,7 +80,7 @@ export default {
         fat: this.fat,
         proteins: this.proteins
       })
-
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/food'
       const requestOptions = {
         method: 'POST',
         headers: myHeaders,
@@ -88,7 +88,7 @@ export default {
         redirect: 'follow'
       }
 
-      fetch('https://kalorientracker-webtech.herokuapp.com/api/v1/food', requestOptions)
+      fetch(endpoint, requestOptions)
         .catch(error => console.log('error', error))
       alert('Dein Food wurde gespeichert')
     },
@@ -161,8 +161,5 @@ body {
 
 h1 {
   color: azure;
-}
-#speicherbutton {
-
 }
 </style>
