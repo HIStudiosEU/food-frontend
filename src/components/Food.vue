@@ -63,8 +63,10 @@ h1 {
 }
 p {
   color: azure;
+  -webkit-text-stroke: 1px #020202;
 }
 h5 {
   color: azure;
+  -webkit-text-stroke: 1px #020202;
 }
 </style>
